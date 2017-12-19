@@ -30,6 +30,16 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Use devise
+gem 'devise'
+# Use boostrap-sass
+gem 'bootstrap-sass', '~> 3.3.6'
+# Use jquery
+gem 'jquery-rails'
+# Use simple_form
+gem 'simple_form'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,6 +49,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # display better
+  gem 'awesome_print', git: 'https://github.com/awesome-print/awesome_print.git', branch: 'master'
+  gem 'hirb'
 end
 
 group :development do
