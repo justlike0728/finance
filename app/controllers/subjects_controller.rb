@@ -1,5 +1,7 @@
 class SubjectsController < ApplicationController
 
+	before_action :find_subject only: [:show, :create, :edit, :destroy]
+
 	def index
 		@subjects = Subject.all.order(created_at: :desc)
 	end
@@ -25,5 +27,8 @@ class SubjectsController < ApplicationController
 		params.require(:subject).permit(:title)
 	end
 
+	def find_subject
+		@subject = Subject.find_by(id: params[:id])
+	end
 
 end
