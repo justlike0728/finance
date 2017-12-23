@@ -1,8 +1,7 @@
 <%= simple_form_for(outcome) do |f| %>
 	<%= f.input :date, label: "日期" %>
 	<%= f.input :department, label: "組別" %>
-  <%= f.select :subject, options_for_select(Subject.pluck(:title)), {include_blank: " - SELECT - "},
-	label: "費別" %>
+  <%= f.select :sub_title, options_for_select(Subject.pluck(:title)), {include_blank: "請選擇費別" }, label: "費別" %>
 	<!-- f.input :sub_title, label: "費別"  -->
 	<%= f.input :explan, label: "說明" %>
 	<%= f.input :money, label: "金額" %>
