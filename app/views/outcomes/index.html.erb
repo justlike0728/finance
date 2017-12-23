@@ -1,0 +1,44 @@
+<div class="container-fluid">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">標題</h3>
+	  </div>
+	  <div class="panel-body">
+	    <table class="table table-borered">
+	    	<thead>
+	    		<tr>
+	    			<th>日期</th>
+	    			<th>組別</th>
+	    			<th>費別</th>
+	    			<th>說明</th>
+	    			<th>金額</th>
+	    			<th>計畫代碼</th>
+	    			<th>單據</th>
+	    			<th>星號</th>
+	    			<th>填寫人</th>
+						<th>功能</th>
+	    		</tr>
+	    	</thead>
+	    	<tbody>
+					<% @outcomes.each do |outcome| %>
+	    		<tr>
+	    			<td><%= outcome.date %></td>
+	    			<td><%= outcome.department %></td>
+	    			<td><%= outcome.sub_title %></td>
+	    			<td><%= outcome.explan %></td>
+	    			<td><%= outcome.money %></td>
+	    			<td><%= outcome.plan_code %></td>
+	    			<td><%= outcome.receipt %></td>
+	    			<td><%= outcome.asterisk %></td>
+	    			<td><%= outcome.people %></td>
+	    			<td>
+	    				<%= link_to '編輯', '#', class: 'btn btn-primary btn-xs' %>
+	    				<%= link_to '刪除', '#', method: "delete", data: { confirm: '確定要刪除嗎？' } , class: 'btn btn-danger btn-xs' %>
+    				</td>
+	    		</tr>
+					<% end %>
+	    	</tbody>
+	    </table>
+	  </div>
+	</div>
+</div>

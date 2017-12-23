@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-12-20
+  department: MyString
+  explan: MyText
+  money: 1
+  plan_code: MyString
+  receipt: MyString
+  asterisk: false
+  people: MyString
+  sub_title: MyString
+
+two:
+  date: 2017-12-20
+  department: MyString
+  explan: MyText
+  money: 1
+  plan_code: MyString
+  receipt: MyString
+  asterisk: false
+  people: MyString
+  sub_title: MyString

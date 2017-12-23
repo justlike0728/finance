@@ -1,0 +1,15 @@
+<%= simple_form_for(outcome) do |f| %>
+	<%= f.input :date, label: "日期" %>
+	<%= f.input :department, label: "組別" %>
+  <%= f.select :subject, options_for_select(Subject.pluck(:title)), {include_blank: " - SELECT - "},
+	label: "費別" %>
+	<!-- f.input :sub_title, label: "費別"  -->
+	<%= f.input :explan, label: "說明" %>
+	<%= f.input :money, label: "金額" %>
+	<%= f.input :plan_code, label: "計畫代碼" %>
+	<%= f.input :receipt, label: "單據" %>
+	<%= f.input :asterisk, label: "星號" %>
+	<%= f.input :people, label: "人員" %>
+	<%= f.submit class: 'btn btn-primary btn-sm' %>
+	<%= link_to '回支出總表', outcomes_path, class: 'btn btn-info btn-sm' %>
+<% end %>

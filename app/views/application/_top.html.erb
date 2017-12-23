@@ -7,25 +7,30 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<%= link_to '財務系統', "#" ,class: 'navbar-brand' %>
+			<%= link_to '財務系統', root_path ,class: 'navbar-brand' %>
 		</div>
 
 		<!-- 手機隱藏選單區 -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<!-- 左選單 -->
 			<ul class="nav navbar-nav">
-				<li class="active dropdown">
-					<%= link_to '財務支出', "#" %>
-				</li>
-				<li><%= link_to '新增支出', "#" %></li>
-				<!-- <li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">繁體中文 <b class="caret"></b></a>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">支出項目 <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">繁體中文</a></li>
-						<li><a href="#">English</a></li>
-						<li><a href="#">日本語</a></li>
+						<li><%= link_to '支出總表', outcomes_path %></li>
+						<li><%= link_to '新增支出', new_outcome_path %></li>
+						<li><%= link_to '費別總表', subjects_path %></li>
+						<li><%= link_to '新增費別', new_subject_path %></li>
 					</ul>
-				</li> -->
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">收入項目 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><%= link_to '收入總表', '#' %></li>
+						<li><%= link_to '新增收入', '#' %></li>
+						<li><%= link_to '暫收款', '#' %></li>
+					</ul>
+				</li>
 			</ul>
 
 			<!-- 搜尋表單 -->
@@ -39,16 +44,16 @@
 			<!-- 右選單 -->
 			<ul class="nav navbar-nav navbar-right">
 				<!-- <li><a href="#">Amos 您好</a></li> -->
-				<li><a href="#">登出</a></li>
+				<li><a href="#">登入</a></li>
 				<li><a href="#">個人設定</a></li>
-				<li class="dropdown">
+				<!-- <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">繁體中文 <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">繁體中文</a></li>
 						<li><a href="#">English</a></li>
 						<li><a href="#">日本語</a></li>
 					</ul>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<!-- 手機隱藏選單區結束 -->
