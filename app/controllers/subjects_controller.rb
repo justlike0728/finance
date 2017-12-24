@@ -1,13 +1,25 @@
 class SubjectsController < ApplicationController
 
-	before_action :find_subject only: [:show, :create, :edit, :destroy]
+	before_action :find_subject, only: [:show, :new, :edit, :update, :destroy]
 
 	def index
-		@subjects = Subject.all.order(created_at: :desc)
+		@subjects = Subject.all
 	end
 
 	def new
 		@subject = Subject.new
+	end
+
+	def edit
+	end
+
+	def update
+		if @subject.update(subject_params)
+			redirect_to subjects_path
+			flash[:notice] = '更新成功！'
+		else
+			render :edit
+		end
 	end
 
 	def create
