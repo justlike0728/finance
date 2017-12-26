@@ -1,14 +1,13 @@
 <%= simple_form_for(outcome) do |f| %>
 	<%= f.input :date, label: "日期" %>
-	<%= f.input :department, label: "組別" %>
-  <%= f.select :sub_title, options_for_select(Subject.pluck(:title)), {include_blank: "請選擇費別" }, label: "費別" %>
-	<!-- f.input :sub_title, label: "費別"  -->
+	<%= f.input :department, prompt: "請選擇組別", collection: [ "院長室", "副院長室", "組長室", "秘書室", "招生組", "學服組", "國際教育組", "進修學分組", "測驗培訓組", "總務組", "資訊組", "林口組" ], label: "組別" %>
+  <%= f.input :sub_title, collection: Subject.pluck(:title), prompt: "請選擇費別", label: "費別" %>
 	<%= f.input :explan, label: "說明" %>
 	<%= f.input :money, label: "金額" %>
 	<%= f.input :plan_code, label: "計畫代碼" %>
 	<%= f.input :receipt, label: "單據" %>
-	<%= f.input :asterisk, label: "星號" %>
+	<%= f.input :asterisk, as: :boolean , label: "星號" %>
 	<%= f.input :people, label: "人員" %>
-	<%= f.submit class: 'btn btn-primary btn-sm' %>
+	<%= f.button :submit, class: 'btn btn-primary btn-sm' %>
 	<%= link_to '回支出總表', outcomes_path, class: 'btn btn-info btn-sm' %>
 <% end %>
